@@ -1,1 +1,1 @@
-Calculates the smallest possible number that can be divided by each of the numbers from 1 to n.
+Calculates the n-th (or in this case the 10001st) prime number.
