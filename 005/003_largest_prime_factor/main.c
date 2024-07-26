@@ -6,7 +6,7 @@
 // Alternative dict with primes?
 // returns true, when a number is a prime number
 bool isPrime(uint64_t n) {
-    for (uint64_t i = 2; i < n>>2; ++i) {
+    for (uint64_t i = 2; i <= n>>1; ++i) {
         if(n % i == 0) {
             return false;
         }
