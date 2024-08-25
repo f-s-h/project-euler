@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 
+/*
 typedef struct node {
     int val;
     struct node * next;
@@ -107,9 +109,28 @@ int smallest_multiple(int n) {
     int result = multiply_nodes(head);
     return result;
 }
+*/
+
+int smallest_multiple(int n) {
+  int smallest_number = n;
+  while(true) {
+    bool divisable = true;
+    for(int i = 2; i <= n; i++) {
+        if(smallest_number % i != 0) {
+          divisable = false;
+          break;
+        }
+    }
+    if(divisable) {
+      break;
+    }
+    smallest_number++;
+  }
+  return smallest_number;
+}
 
 int main(void) {
-    int n = 10;
+    int n = 20;
     int result = smallest_multiple(n);
     printf("Smallest multiple from 1 to %d: %d\n", n, result);
     return EXIT_SUCCESS;
